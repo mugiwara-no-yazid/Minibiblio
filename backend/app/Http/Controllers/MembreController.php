@@ -75,5 +75,5 @@ class MembreController extends Controller
 
         return response()->noContent();
     }
-    }
+    
 }
