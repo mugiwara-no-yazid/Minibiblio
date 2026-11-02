@@ -49,6 +49,7 @@ class MembreController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $membre = Membre::findOrFail($id);
          $data = $request->validate([
             'nom' => 'required|string|max:255',
             'email' => ['required', 'email', 'max:255', Rule::unique('membres', 'email')->ignore($membre->id)],
@@ -65,6 +66,7 @@ class MembreController extends Controller
     public function destroy(string $id)
     {
         //
+        $membre = Membre::findOrFail($id);
         if ($membre->emprunts()->count() > 0) {
             return response()->json([
                 'message' => 'Ce membre ne peut pas etre supprime.'

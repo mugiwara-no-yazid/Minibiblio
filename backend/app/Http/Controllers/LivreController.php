@@ -44,6 +44,7 @@ class LivreController extends Controller
     public function show(string $id)
     {
         //
+        $livre = Livre::findOrFail($id);
         $livre->exemplaires_disponibles = $livre->exemplairesDisponibles();
 
         return response()->json($livre, 200);
@@ -55,6 +56,7 @@ class LivreController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $livre = Livre::findOrFail($id);
         $data = $request->validate([
             'titre' => 'required|string|max:255',
             'auteur' => 'required|string|max:255',
@@ -78,6 +80,7 @@ class LivreController extends Controller
     public function destroy(string $id)
     {
         //
+        $livre = Livre::findOrFail($id);
         if ($livre->empruntsEnCours() > 0) {
             return response()->json([
                 'message' => 'Ce livre a des emprunts en cours, il ne peut pas etre supprime.'
