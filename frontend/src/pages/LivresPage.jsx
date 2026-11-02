@@ -97,7 +97,7 @@ function LivresPage() {
                 <td>{livre.exemplaires_disponibles}</td>
                 <td>
                   <button onClick={() => setLivreAModifier(livre)}>Modifier</button>{' '}
-                  <button className="danger" onClick={() => supprimerLivre(livre)}>Supprimer</button>
+                  <button className="btn-danger" onClick={() => supprimerLivre(livre)}>Supprimer</button>
                 </td>
               </tr>
             ))}

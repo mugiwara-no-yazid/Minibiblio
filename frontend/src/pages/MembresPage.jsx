@@ -91,7 +91,7 @@ function MembresPage() {
                 <td>{membre.email}</td>
                 <td>
                   <button onClick={() => setMembreAModifier(membre)}>Modifier</button>{' '}
-                  <button onClick={() => supprimerMembre(membre)}>Supprimer</button>
+                  <button className="btn-danger" onClick={() => supprimerMembre(membre)}>Supprimer</button>
                 </td>
               </tr>
             ))}

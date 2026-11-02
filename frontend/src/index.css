@@ -1,3 +1,10 @@
+.error {
+  color: red;
+}
+.btn-danger{
+  background-color: red;
+  color: #e5e4e7;
+}
 :root {
   --text: #6b6375;
   --text-h: #08060d;

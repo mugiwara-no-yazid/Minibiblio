@@ -3,6 +3,7 @@ import LivresPage from './pages/LivresPage.jsx';
 import MembresPage from './pages/MembresPage.jsx';
 import EmpruntsPage from './pages/EmpruntsPage.jsx';
 import './App.css';
+import './index.css';
 function App() {
   return (
     <div>
